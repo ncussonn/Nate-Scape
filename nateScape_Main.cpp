@@ -1,25 +1,25 @@
 using namespace std;
 
-#include <iostream>     // cout cin
-#include <stdio.h>      // standard input/output library
-#include <unistd.h>     // sleep library
-#include "C:\Users\Nate\Desktop\Programming\Coding\Text Based Game\header_Files\nateScapeLib.h"   // custom functions and classes
+// import various necessary libraries
 
-// creating the .exe
+#include <iostream>         // cout cin
+#include <stdio.h>          // standard input/output library
+#include <unistd.h>         // sleep library
+#include "mainLibrary.h"    // main functions and classes for game aspects
+#include "combatLibrary.h"  // functions and classes for combat related events
+
+// How to create the .exe
 /* g++ nateScape_Main.cpp -o textGame -static*/
 
 int main() {   
     
     cout << "Welcome to Nate-Scape!\n"<< endl;
 
-    // Create an object called player
-    Character player;
-
     // Create an object called game
     Game game;
 
     // initialize attributes of player (gender and name)
-    player.initialize();    
+    game.player.initialize();    
 
     // provide the rules
     game.printRules();
